@@ -16,8 +16,55 @@
   </head>
 
   <body>
-    <div class="content"></div>
+    <div class="content">
+      <div class="container">
+        <div class="row">
+          <div class="col">
+            <h1>Fastest Presser</h1>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-4"></div>
+          <div class="col-md-4 text-center">
+            <input
+              id="timerInput"
+              type="number"
+              class="form-control"
+              width="200px"
+            />
+            <p id="incorrectInput"></p>
+            <button id="startButton" type="button" class="btn btn-primary">
+              Start
+            </button>
+          </div>
+          <div class="col-md-4"></div>
+        </div>
+        <div class="row" height="400px">
+          <div class="col">
+            <h2>Player One</h2>
+            <p>Press "S" to win</p>
+            <p id="playerOneScore">Score: 0</p>
+          </div>
+          <div class="col">
+            <h2>Player Two</h2>
+            <p>Press "L" to win</p>
+            <p id="playerTwoScore">Score: 0</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col"></div>
+          <div class="col">
+            <h1 id="wonText"></h1>
+          </div>
+          <div class="col"></div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <h1 id="countDown"></h1>
+          </div>
+        </div>
+      </div>
+    </div>
   </body>
-
-  <script src="script.js"></script>
+  <script src="/challenge-fastest-presser/script.js"></script>
 </html>
