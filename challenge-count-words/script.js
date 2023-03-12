@@ -1,8 +1,27 @@
 function calculateWords(chapterOfABook) {
-  const wordCount = {};
+  let wordCount = {};
+  const arrOfwords = chapterOfABook.split(" ");
+  for (let word of arrOfwords) {
+    let replacedWord = word.replace(/[^\w\s]|_/g, "").toLowerCase();
+    if (word === "") {
+      wordCount = {};
+    } else {
+      wordCount[replacedWord] = (wordCount[replacedWord] || 0) + 1;
+    }
+  }
+  let mostCommonWord = null;
+  let maxValue = Number.NEGATIVE_INFINITY;
 
+  for (let word in wordCount) {
+    if (wordCount.hasOwnProperty(word)) {
+      if (wordCount[word] > maxValue) {
+        mostCommonWord = word;
+        maxValue = wordCount[word];
+      }
+    }
+  }
   // Write your code in here
-
+ console.log(mostCommonWord)
   return wordCount;
 }
 
